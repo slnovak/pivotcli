@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{pivotcli}
-  s.version = "0.0.3"
+  s.version = "0.0.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Julius F"]
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.executables = ["pivotcli"]
   s.extra_rdoc_files = ["History.txt", "bin/pivotcli"]
   s.files = [".bnsignore", ".gitignore", "History.txt", "NERD_tree_1", "README.md", "Rakefile", "bin/pivotcli", "lib/pivotcli.rb", "lib/pivotcli/runner.rb", "pivotcli.gemspec", "spec/pivotcli_spec.rb", "spec/spec_helper.rb", "test/test_pivotcli.rb", "version.txt"]
-  s.homepage = %q{http://julius.weekendhack.in}
+  s.homepage = %q{http://baldrailers.tumblr.com}
   s.rdoc_options = ["--main", "README.md"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{pivotcli}

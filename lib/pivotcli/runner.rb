@@ -10,6 +10,7 @@ class Runner
     @state = options[:state]
     @token = options[:token]
     @show_desc = options[:show_descriptions]
+    @story_type = options[:story_type]
 
     if @token.nil?
       load_config

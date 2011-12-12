@@ -27,7 +27,7 @@ require File.expand_path(
     option :state do
       short '-s'
       long '--state=STATE'
-      desc 'State of the stories (started, unstarted, finished, delivered, accepted)'
+      desc 'State of the stories (started, unstarted, finished, delivered, accepted, unscheduled)'
       default 'unstarted'
     end
 
@@ -35,6 +35,12 @@ require File.expand_path(
       short '-d'
       long '--description'
       desc 'Show description from stories'
+    end
+
+    option :story_type do
+      short '-st'
+      long '--story_type=TYPE'
+      desc 'Story Type (feature, bug, chore, release)'
     end
 
     option :token do
@@ -62,6 +68,7 @@ require File.expand_path(
                       :owner => Choice.choices[:owner],
                       :token => Choice.choices[:token],
                       :state => Choice.choices[:state],
+                      :story_type => Choice.choices[:story_type],
                       :show_descriptions => Choice.choices[:show_descriptions])
 
   runner.get_stories
