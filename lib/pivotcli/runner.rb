@@ -9,6 +9,7 @@ class Runner
     @owner = options[:owner]
     @state = options[:state]
     @token = options[:token]
+    @show_desc = options[:show_descriptions]
 
     if @token.nil?
       load_config
@@ -32,6 +33,7 @@ class Runner
   def get_stories
     @project.stories.all(:current_state => @state, :owned_by => @owner).each do |story|
       puts "#{story.id.to_s.red} | #{story.name}"
+      puts "\t#{story.description.cyan}" unless @show_desc.nil? or story.description.empty?
     end
   end
 

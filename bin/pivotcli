@@ -31,6 +31,12 @@ require File.expand_path(
       default 'unstarted'
     end
 
+    option :show_descriptions do
+      short '-d'
+      long '--description'
+      desc 'Show description from stories'
+    end
+
     option :token do
       short '-t'
       long '--token=TOKEN'
@@ -55,6 +61,7 @@ require File.expand_path(
   runner = Runner.new(:project => Choice.choices[:project], 
                       :owner => Choice.choices[:owner],
                       :token => Choice.choices[:token],
-                      :state => Choice.choices[:state])
+                      :state => Choice.choices[:state],
+                      :show_descriptions => Choice.choices[:show_descriptions])
 
   runner.get_stories
